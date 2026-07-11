@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Zyvron AI | Prediction History</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Prediction History</h1>
+
+    <p>All predictions stored in Zyvron AI Database</p>
+
+    <hr>
+
+    <table>
+
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Prediction</th>
+            <th>Risk %</th>
+        </tr>
+
+        {% for row in records %}
+
+        <tr>
+
+            <td>{{ row[1] }}</td>
+
+            <td>{{ row[2] }}</td>
+
+            <td>{{ row[11] }}</td>
+
+            <td>{{ row[12] }}%</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Back to Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>
